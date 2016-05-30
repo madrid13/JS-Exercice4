@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exercice-2</title>
+  <title>Exercice-4</title>
   <meta charset="utf-8">
 </head>
 <body>
+  <form>
+    <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+    <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+    <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+    <button name="valider" id = "valider" onClick="validation();">Valider</button>
+  </form>
   <script>
-  alert("Bonjour " + prompt("Prénom"));
+   function validation() {
+     var nom = document.getElementById('nom').value;
+     var prenom = document.getElementById('prenom').value;
+     var ville = document.getElementById('ville').value;
+     alert('Nom : ' + nom +'\n'+ 'Prénom : ' + prenom +'\n'+ 'Ville : ' + ville);
+   }
   </script>
 </body>
 </html>
