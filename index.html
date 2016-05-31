@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Exercice-4</title>
+  <title>Exercice-5</title>
   <meta charset="utf-8">
 </head>
 <body>
   <form>
-    <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
-    <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
-    <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
-    <button name="valider" id = "valider" onClick="validation();">Valider</button>
+    <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+    <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+    <button  id="valider" name ="valider" onClick="HAKABOUT()">Valider</button>
   </form>
   <script>
-   function validation() {
-     var nom = document.getElementById('nom').value;
-     var prenom = document.getElementById('prenom').value;
-     var ville = document.getElementById('ville').value;
-     alert('Nom : ' + nom +'\n'+ 'Prénom : ' + prenom +'\n'+ 'Ville : ' + ville);
-   }
+  function HAKABOUT(){
+    var premiernombre = document.getElementById('premier_nombre').value;
+    var deuxiemenombre = document.getElementById('deuxieme_nombre').value;
+    if (isNaN (premiernombre) == true ||isNaN (deuxiemenombre) == true) {
+      alert("Error");
+    }
+    else {
+      premiernombre = parseInt(premiernombre);
+      deuxiemenombre = parseFloat(deuxiemenombre);
+      var result = premiernombre * deuxiemenombre;
+      alert(result);
+    }
+  }
   </script>
 </body>
 </html>
